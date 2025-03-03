@@ -12,7 +12,7 @@ export const GET = async () => {
 		})
 	)
 	.then(posts => {
-		return posts.sort((a, b) => new Date(b.date) - new Date(a.date))
+		return posts.filter(post => post.active).sort((a, b) => new Date(b.date) - new Date(a.date))
 	})
 
 	const body = render(data)

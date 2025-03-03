@@ -1,27 +1,19 @@
 <script>
-	import { preventDefault } from 'svelte/legacy';
-
-	import MainNav from './MainNav.svelte'
-	import HamburgerMenuButton from './HamburgerMenuButton.svelte'
-	import { siteTitle } from '$lib/config'
-
-	const focusMain = () => {
-		const main = document.querySelector('main');
-		main.focus();
-	}
+	import { siteTitle } from '$lib/config';
+	import { navItems } from '$lib/config';
 </script>
 
+<header class="pt-5">
+	<div class="container mx-auto">
+		<a href="/" class="text-2xl font-bold">
+			{siteTitle}
+		</a>
 
-<header>
-	<a onclick={preventDefault(focusMain)} class="skip-to-content-link" href="#main">
-		Skip to main content
-	</a>
-	
-	<a href="/" class="site-title">
-		{siteTitle}
-	</a>
-	
-	<HamburgerMenuButton />
-	<MainNav />
-
+		<nav>
+			{#each navItems as item, index}
+				<a href={item.route}>{item.title}</a> {index < navItems.length - 1 ? ' - ' : ''}
+			{/each}
+		</nav>
+	</div>
 </header>
+<hr />

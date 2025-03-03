@@ -1,21 +1,17 @@
 <script>
 	import { siteAuthor } from '$lib/config';
-	import NavItems from './NavItems.svelte';
+	import { navItems } from '$lib/config';
 </script>
 
-<footer>
+<footer class="py-5">
 	<nav>
-		<ul>
-			<li>
-				<a href="/api/rss.xml" data-sveltekit-reload>RSS</a>
-			</li>
-			<li>
-				<a href="/">Home</a>
-			</li>
-		</ul>
-	</nav>
-	<nav>
-		<NavItems />
+		<a href="/">Home</a> - 
+		<a href="/api/rss.xml" data-sveltekit-reload>RSS</a> - 
+
+		{#each navItems as item, index}
+			<a href={item.route}>{item.title}</a>
+			{index < navItems.length - 1 ? ' - ' : ''}
+		{/each}
 	</nav>
 
 	<p>&copy;{new Date().getFullYear()} {siteAuthor}</p>

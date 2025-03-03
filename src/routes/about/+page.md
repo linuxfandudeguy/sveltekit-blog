@@ -1,21 +1,30 @@
+<script>
+    import { siteTitle } from '$lib/config'
+</script>
+
 <svelte:head>
-	<title>About</title>
+
+<title>{siteTitle} About</title>
 </svelte:head>
 
 # About
 
-This is an example of how you can have _markdown_ in page content!
+Welcome to my corner of the internet. This blog is where I share my thoughts, experiences, and discoveries.
 
-- How
-- **Cool**
-- Is _that_!?
+## Who Am I?
 
-If you like, you can also import markdown into any Svelte page.
+I'm a developer, writer, and perpetual learner. When I'm not coding or writing, you'll find me exploring new technologies and ideas.
 
-Anyway, you can find this file here:
+## Why This Blog?
 
-```
-src/routes/about/+page.md
-```
+I believe in sharing knowledge and experiences openly. This space lets me document my journey while hopefully helping others along theirs.
 
-Here's the [home link](/) if you wanna go back.
+## Let's Connect
+
+Find me around the web:
+
+- [GitHub](https://github.com/yourusername)
+- [Twitter](https://twitter.com/yourhandle)
+- [LinkedIn](https://linkedin.com/in/yourprofile)
+
+Feel free to reach out if you want to chat or collaborate.

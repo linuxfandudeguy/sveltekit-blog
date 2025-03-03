@@ -1,8 +1,8 @@
 <!-- This file handles any /blog/page/x route for pagination -->
-<script>
-	import PostsList from '$lib/components/PostsList.svelte'
-	import Pagination from '$lib/components/Pagination.svelte'
-  import { postsPerPage, siteDescription } from '$lib/config'
+<script lang="ts">
+	import Pagination from '$lib/components/Pagination.svelte';
+	import PostsList from '$lib/components/PostsList.svelte';
+	import { postsPerPage, siteDescription } from '$lib/config';
 
 	let { data } = $props();
 	const { page, totalPosts, posts } = data
@@ -20,7 +20,7 @@
 
 <!-- TODO: this is duplicated across multiple `+page.svelte` files -->
 {#if posts.length}
-	<h1>Posts {lowerBound}–{upperBound} of {totalPosts}</h1>
+	<!-- <h1>Posts {lowerBound}–{upperBound} of {totalPosts}</h1> -->
 	<Pagination currentPage={page} {totalPosts} />
 
 	<PostsList {posts} />

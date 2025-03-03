@@ -1,27 +1,21 @@
-<script>
+<script lang="ts">
 	let { posts = [] } = $props();
 </script>
 
-
-<ul class="posts-list">
-	{#each posts as post}
-		<li>
-			<article>
-				<a href="/blog/{post.slug}">
-					<img
-					src={post.coverImage}
-					alt=""
-					width={post.coverWidth}
-					height={post.coverHeight}
-					style="ratio: {post.coverWidth} / {post.coverHeight}"
-					/>
-					<h2>
-						{post.title}
-					</h2>
+{#each posts as post}
+	<article class="mb-5">
+		<a href="/blog/{post.slug}" class="font-bold">
+			{post.title}
+		</a>
+		<br />
+		{post.excerpt}
+		<div class="text-sm text-gray-500">Published on {post.date} - 
+			{#each post.categories as category, index}
+				<a href="/blog/category/{category}/" class="text-gray-500">
+					{category}
 				</a>
-			</article>
-
-			<p>{post.excerpt}</p>
-		</li>
-	{/each}
-</ul>
+				{index < post.categories.length - 1 ? ', ' : ''}
+			{/each}
+		</div>
+	</article>
+{/each}

@@ -20,25 +20,26 @@
 	 -moz-hyphens: none;
 	 -ms-hyphens: none;
 	 hyphens: none;
+	 white-space: pre-wrap;
  }
  
  /* Code blocks */
  pre[class*="language-"] {
 	 padding: 1em;
-	 margin: 2rem 0;
+	 margin: 1rem 0;
 	 overflow: auto;
-	 border-radius: 0.3em;
+	 border-radius: 0.75em;
  }
  
  :not(pre) > code[class*="language-"],
  pre[class*="language-"] {
-	 background: #282a36;
+	 background: #27272A;
  }
  
  /* Inline code */
  :not(pre) > code[class*="language-"] {
 	 padding: .1em;
-	 border-radius: .3em;
+	 border-radius: .5em;
 	 white-space: normal;
  }
  

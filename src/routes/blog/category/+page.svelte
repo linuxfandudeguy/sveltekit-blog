@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	let { data } = $props();
   const { uniqueCategories } = data
 </script>

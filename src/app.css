@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+	body {
+		@apply bg-neutral-950 text-zinc-300 text-base;
+	}
+	h1,
+	h2,
+	h3,
+	h4 {
+		@apply font-medium;
+	}
+	h1::before {
+		content: '-';
+		@apply bg-green-400 mr-2;
+	}
+	h2::before {
+		content: '-';
+		@apply bg-blue-400 mr-2;
+	}
+	h3::before {
+		content: '-';
+		@apply bg-yellow-400 mr-2;
+	}
+	h4::before {
+		content: '-';
+		@apply bg-red-400 mr-2;
+	}
+	h1::after,
+	h2::after {
+		@apply content-[''] block w-full h-px bg-zinc-800 my-3;
+	}
+	h1 {
+		@apply text-2xl text-green-400 my-4;
+	}
+
+	h2 {
+		@apply text-xl text-blue-400;
+		@apply mt-4 mb-2;
+	}
+	h3 {
+		@apply text-lg text-yellow-400;
+		@apply mt-4 mb-1;
+	}
+	h4 {
+		@apply text-red-400;
+	}
+
+	strong {
+		@apply font-bold;
+	}
+	blockquote {
+		@apply bg-zinc-800 px-4 py-4 rounded-xl my-2;
+	}
+	mark {
+		@apply bg-gray-300 text-black px-1;
+	}
+	a {
+		@apply text-yellow-500 hover:text-yellow-600;
+	}
+	ul,
+	ol {
+		@apply list-outside my-5 ml-6;
+	}
+
+	ul {
+		@apply list-disc;
+	}
+
+	ol {
+		@apply list-decimal;
+	}
+
+	/* Nested list adjustments */
+	ul ul,
+	ul ol,
+	ol ul,
+	ol ol {
+		@apply my-2 ml-4;
+	}
+
+	/* Remove the previous li styles if they exist */
+	li {
+		@apply leading-normal;
+	}
+	::selection {
+		@apply bg-yellow-500 text-zinc-900;
+	}
+
+	th {
+		@apply text-left pr-10;
+	}
+	td {
+		@apply pr-10;
+	}
+	hr {
+		@apply border-zinc-800 my-3;
+	}
+	p {
+		@apply my-3;
+	}
+	::-webkit-scrollbar {
+		display: none;
+	}
+	* {
+		-ms-overflow-style: none;
+		scrollbar-width: none;
+	}
+}

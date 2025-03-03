@@ -1,7 +1,4 @@
 <script>
-	import { createBubbler, preventDefault } from 'svelte/legacy';
-
-	const bubble = createBubbler();
 	import Callout from '$lib/components/Callout.svelte'
 </script>
 
@@ -19,7 +16,7 @@ If you're using this starter for your own site, feel free to delete this page, o
 
 <Callout>This form does nothing! It's just here to show default styling.</Callout>
 
-<form onsubmit={preventDefault(bubble('submit'))}>
+<form on:submit|preventDefault>
 	<div class="form-section">
 		<label for="name">Name</label>
 		<input type="text" id="name" placeholder="First name" />

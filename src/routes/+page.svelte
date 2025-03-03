@@ -1,12 +1,11 @@
-<script>
+<script lang="ts">
 	import { siteTitle } from '$lib/config';
-
 	let { data } = $props();
 </script>
 
 <svelte:head>
 	<title>{siteTitle}</title>
+	<meta name="description" content="A blog about tech, programming, marketing and weekend projects." />
 </svelte:head>
 
-<!-- This is the README.md file in the root of the repo. It serves double duty as the homepage's content. If you'd rather use your own HTML and/or Svelte, you can delete/modify everything in this file. -->
-<data.ReadMe />
+<data.Homepage />

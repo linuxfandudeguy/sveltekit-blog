@@ -1,8 +1,8 @@
 <!-- Renders any page at /blog/category/* -->
-<script>
-	import PostsList from '$lib/components/PostsList.svelte'
-	import Pagination from '$lib/components/Pagination.svelte'
-  import { postsPerPage } from '$lib/config'
+<script lang="ts">
+	import Pagination from '$lib/components/Pagination.svelte';
+	import PostsList from '$lib/components/PostsList.svelte';
+	import { postsPerPage } from '$lib/config';
 
 	let { data } = $props();
 
@@ -18,7 +18,7 @@
 </svelte:head>
 
 
-<h1>Blog category: {category}</h1>
+<h1>Category: {category}</h1>
 
 {#if posts.length}
 	<PostsList posts={posts} />
