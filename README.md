@@ -118,8 +118,6 @@ This fork makes the following major changes to the original SvelteKit blog start
 - **Post Control:** Added `active` flag to show/hide posts
 - **Simplified Pagination:** Changed to just previous/next links instead of numbered pages
 - **HTML Minification:** Added sveltekit-html-minifier for smaller output
-- **Removed Custom Fonts:** Simplified by removing bundled fonts
-- **Cleaner Homepage:** Using dedicated homepage.md instead of README.md
 - **Customizable cover image dimensions** - Easily set the width and height for your post cover images in each post's frontmatter
 
 Thanks to the [original creator](https://github.com/josh-collinsworth/sveltekit-blog-starter) for the great work!
