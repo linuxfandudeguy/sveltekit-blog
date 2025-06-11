@@ -6,11 +6,11 @@
  **/
 
 // Site Information
-export const siteTitle = 'My SvelteKit Blog';
-export const siteDescription = 'A blog built with SvelteKit';
-export const siteURL = 'example.com';
-export const siteLink = 'https://example.com';
-export const siteAuthor = 'Your Name Here';
+export const siteTitle = 'my blog;
+export const siteDescription = 'A blog';
+export const siteURL = 'lelelbois.netlify.app';
+export const siteLink = 'https://lelelbois.netlify.app';
+export const siteAuthor = 'blog';
 
 // Controls how many posts are shown per page on the main blog index pages
 export const postsPerPage = 20;
